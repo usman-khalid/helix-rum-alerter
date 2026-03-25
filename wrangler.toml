@@ -1,0 +1,13 @@
+name = "helix-performance-alerter"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+
+# Email (Resend): wrangler secret put RESEND_API_KEY
+#   wrangler secret put RESEND_FROM           # optional (default onboarding@resend.dev)
+
+[triggers]
+crons = ["0 * * * *"]
+
+[[kv_namespaces]]
+binding = "PERFORMANCE_ALERTER_STORE"
+id = "248fff2faecf4292aedc4b4e35f0093c"
